@@ -1,0 +1,5 @@
+<%= form_tag product_find_path, method: :get do %>
+  <%= label_tag(:find, "Enter or scan product UPC:") %>
+  <%= text_field_tag 'upc' %>
+  <%= submit_tag("Find Product") %>
+<% end %>

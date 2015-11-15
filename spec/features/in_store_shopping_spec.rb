@@ -4,9 +4,8 @@ RSpec.feature "In store product shoping" do
 
   scenario "with no previous product research" do
     visit "/"
-    click_link "Research Products"
-    expect(page).to have_content "Enter or scan product UPC"
-    fill_in "UPC", with: "1  23456 78999  9"
+    expect(page).to have_content "Enter or scan product UPC:"
+    fill_in "upc", with: "1  23456 78999  9"
     click_button "Find Product"
     expect(page).to have_content "Found product"
   end
